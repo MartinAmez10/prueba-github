@@ -75,12 +75,25 @@ while True:
             break
       elif op_consulta == 2:
         # Reportes tabulados
-        print(datos)
-        print("Escoge una forma de filtrar los datos:")
-        print()
-        print()
-        print()
-        
+        while True:
+          print("DATOS GUARDADOS:")
+          print("*"*50)
+          print(datos)
+          print("*"*50)
+          print("Escoge una forma de filtrar los datos:")
+          print("[1]- Por autor")
+          print("[2]- Por genero")
+          print("[3]- Por año de publicacion")
+          print("[4]- Regresar al menu anterior")
+          op_reporte = input()
+          if op_reporte == 1:
+            
+          elif op_reporte == 2:
+
+          elif op_reporte == 3:
+
+          elif op_reporte == 4:
+            break
       elif op_consulta == 3:
         print('Volviendo al menú principal . . .')
         break
