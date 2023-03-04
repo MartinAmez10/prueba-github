@@ -88,11 +88,14 @@ while True:
           print("[4]- Regresar al menu anterior")
           op_reporte = input()
           if op_reporte == 1:
-            
+            op_filtro = input("Dame el autor: \n")
+
           elif op_reporte == 2:
+            op_filtro = input("Dame el genero: \n")
 
           elif op_reporte == 3:
-
+            op_filtro = input("Dame el año de publicacion: \n")
+            
           elif op_reporte == 4:
             break
       elif op_consulta == 3:
