@@ -9,7 +9,7 @@ while True:
   if op_main == 1:
     # Registro de datos
     while True:
-      identificador = max(datos, default=0)+1
+      identificador = max(datos, default=1)+1
       titulo = input("Dame el nombre del libro: \n").upper()
       autor = input(f"Dame el autor de {titulo}: \n").upper()
       genero = input(f"Cual es el genero de {titulo}: \n").upper()
@@ -17,11 +17,11 @@ while True:
       ISBN = input(f"Cual es el ISBN de {titulo}: \n").upper()
       fecha_adquisicion = input(f"Cuando se adquirio {titulo}: \n").upper()
       print("Datos cargados!")
-      op_registro = input("Deseas agregar mas?(clickea enter) \n")
+      op_registro = input("Deseas agregar mas?(si es no presiona enter) \n")
       if op_registro == "":
         break
       else:
-        datos[identificador] = [titulo,autor,genero,año_publicacion,ISBN,fecha_adquisicion]
+        datos[identificador:titulo,autor,genero,año_publicacion,ISBN,fecha_adquisicion]
   elif op_main == 2:
     # Consultas y Reportes
     while True:
