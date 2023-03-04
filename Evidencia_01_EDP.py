@@ -78,7 +78,8 @@ while True:
         while True:
           print("DATOS GUARDADOS:")
           print("*"*50)
-          print(datos)
+          for identificadores in datos:
+            print(datos)
           print("*"*50)
           print("Escoge una forma de filtrar los datos:")
           print("[1]- Por autor")
