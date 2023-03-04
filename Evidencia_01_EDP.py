@@ -16,12 +16,11 @@ while True:
       año_publicacion = input(f"En que año se publico {titulo}: \n").upper()
       ISBN = input(f"Cual es el ISBN de {titulo}: \n").upper()
       fecha_adquisicion = input(f"Cuando se adquirio {titulo}: \n").upper()
+      datos[identificador] = [titulo,autor,genero,año_publicacion,ISBN,fecha_adquisicion]
       print("Datos cargados!")
-      op_registro = input("Deseas agregar mas?(si es no presiona enter) \n")
-      if op_registro == "":
+      op_registro = input("Deseas agregar mas?(clickea enter) \n")
+      if op_registro.strip() == "":
         break
-      else:
-        datos[identificador:titulo,autor,genero,año_publicacion,ISBN,fecha_adquisicion]
   elif op_main == 2:
     # Consultas y Reportes
     while True:
@@ -41,9 +40,8 @@ while True:
           print("[3]- Regresar al menu anterior")
           op_busqueda = int(input())
           if op_busqueda == 1:
-            for key in datos:
-              print(datos[identificador])
-            print()
+            for i in datos:
+              print(datos[i][0])
           elif op_busqueda == 2:
             print('ISBN')
           elif op_busqueda == 3:
