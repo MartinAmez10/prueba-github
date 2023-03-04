@@ -9,7 +9,7 @@ while True:
   if op_main == 1:
     # Registro de datos
     while True:
-      identificador = max(datos, default=1)+1
+      identificador = max(datos, default=0)+1
       titulo = input("Dame el nombre del libro: \n").upper()
       autor = input(f"Dame el autor de {titulo}: \n").upper()
       genero = input(f"Cual es el genero de {titulo}: \n").upper()
@@ -43,6 +43,7 @@ while True:
           if op_busqueda == 1:
             for key in datos:
               print(datos[identificador])
+            print()
           elif op_busqueda == 2:
             print('ISBN')
           elif op_busqueda == 3:
