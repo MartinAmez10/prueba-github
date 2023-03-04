@@ -18,7 +18,7 @@ while True:
       fecha_adquisicion = input(f"Cuando se adquirio {titulo}: \n").upper()
       datos[identificador] = [titulo,autor,genero,año_publicacion,ISBN,fecha_adquisicion]
       print("Datos cargados!")
-      op_registro = input("Deseas agregar mas?(clickea enter) \n")
+      op_registro = input("Deseas agregar mas?(si es no clickea enter) \n")
       if op_registro.strip() == "":
         break
   elif op_main == 2:
@@ -75,7 +75,12 @@ while True:
             break
       elif op_consulta == 2:
         # Reportes tabulados
-        print('Reportes')
+        print(datos)
+        print("Escoge una forma de filtrar los datos:")
+        print()
+        print()
+        print()
+        
       elif op_consulta == 3:
         print('Volviendo al menú principal . . .')
         break
