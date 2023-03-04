@@ -40,10 +40,37 @@ while True:
           print("[3]- Regresar al menu anterior")
           op_busqueda = int(input())
           if op_busqueda == 1:
+            # Muestra el catálago de Libros (POR TÍTULO)
             for i in datos:
               print(datos[i][0])
+            # Añadí esto para filtrar por título y mostrar información (Maybe lo módifico)
+            titulo_buscar = input('Seleccione el título a mostrar: ')
+            for i in datos:
+              if titulo_buscar == datos[i][0]:
+                print('*'*5, ' Datos del libro ', '*'*5)
+                print('\tTítulo: ', datos[i][0])
+                print('\tAutor: ', datos[i][1])
+                print('\tGénero: ', datos[i][2])
+                print('\tAño de Publicación: ', datos[i][3])
+                print('\tISBN: ', datos[i][4])
+                print('\tFecha de Adquisición: ', datos[i][5])
+                print('*'*27)
+                break
           elif op_busqueda == 2:
-            print('ISBN')
+            # Muestra el libro (POR ISBN)
+            # 1h Para hacer esto dios mio, ya hace falta dormir
+            isbn_buscar = input('Ingrese el ISBN: ')
+            for i in datos:
+              if isbn_buscar == datos[i][4]:
+                print('*'*5, ' Datos del libro ', '*'*5)
+                print('ISBN seleccionado: ', isbn_buscar)
+                print('\tTítulo: ', datos[i][0])
+                print('\tAutor: ', datos[i][1])
+                print('\tGénero: ', datos[i][2])
+                print('\tAño de Publicación: ', datos[i][3])
+                print('\tFecha de Adquisición: ', datos[i][5])
+                print('*'*27)
+                break            
           elif op_busqueda == 3:
             break
       elif op_consulta == 2:
