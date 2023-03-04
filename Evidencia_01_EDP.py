@@ -20,7 +20,13 @@ while True:
       if op = "":
         break
   elif op == 2:
-    # Consulta los datos guardados
+    while True:
+      print("Selecciona una opcion que quieras realizar (escribe el numero):")
+      print("[1]- Consulta de titulo")
+      print("[2]- Reportes")
+      print("[3]- Regresar al menu principal")
+      op = int(input())
+      
   elif op == 3:
     # Sale del programa
     break
