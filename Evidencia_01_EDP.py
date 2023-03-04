@@ -7,6 +7,7 @@ while True:
   op_main = int(input())
   
   if op_main == 1:
+    # Registro de datos
     while True:
       identificador = max(datos.key,default=0)+1
       titulo.upper() = input("Dame el nombre del libro: \n")
@@ -20,13 +21,17 @@ while True:
       if op_registro = "":
         break
   elif op_main == 2:
+    # Consultas y Reportes
     while True:
       print("Selecciona una opcion que quieras realizar (escribe el numero):")
       print("[1]- Consulta de titulo")
       print("[2]- Reportes")
       print("[3]- Regresar al menu principal")
       op_consulta = int(input())
+      
+      # Separamos por la opción seleccionada
       if op_consulta == 1:
+        # Consulta de título o ISBN
         while True:
           print("De que forma deseas buscar el libro?(escribe el numero):")
           print("[1]- Por titulo")
@@ -34,11 +39,17 @@ while True:
           print("[3]- Regresar al menu anterior")
           op_busqueda = int(input())
           if op_busqueda == 1:
-
+            
           elif op_busqueda == 2:
 
           elif op_busqueda == 3:
             break
+      elif op_consulta == 2:
+        # Reportes tabulados
+      
+      elif op_consulta == 3:
+        print('Volviendo al menú principal . . .')
+        break
 
   elif op_main == 3:
     # Sale del programa
