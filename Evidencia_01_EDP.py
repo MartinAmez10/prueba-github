@@ -88,6 +88,7 @@ while True:
           print("[4]- Regresar al menu anterior")
           op_reporte = int(input())
           if op_reporte == 1:
+            # AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
             filtro_autor = input("Dame el autor: \n").upper
             if filtro_autor == identificador:
               for filtro_autor in datos:
