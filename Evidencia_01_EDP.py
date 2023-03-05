@@ -76,6 +76,11 @@ while True:
       elif op_consulta == 2:
         # Reportes tabulados
         while True:
+          print("DATOS GUARDADOS:")
+          print("*"*50)
+          for identificadores in datos:
+            print(datos[identificadores])
+          print("*"*50)
           print("Escoge una forma de filtrar los datos:")
           print("[1]- Por autor")
           print("[2]- Por genero")
@@ -86,16 +91,25 @@ while True:
           if op_reporte == 1:
             # AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
             filtro_autor = input("Dame el autor: \n").upper()
+            print('TITULO', ' '*29, 'AUTOR', ' '*18, 'GÉNERO', ' '*8, 'AÑO', ' '*5, 'ISBN', ' '*8, 'ADQUIRIDO   ')
             for i in datos:
               if filtro_autor == datos[i][1]:
                 print(f'{datos[i][0]:35} {datos[i][1]:25} {datos[i][2]:15} {datos[i][3]:8} {datos[i][4]:15} {datos[i][5]:12}')
                 print('\n')
           elif op_reporte == 2:
             filtro_genero = input("Dame el genero: \n").upper()
-
+            print('TITULO', ' '*29, 'AUTOR', ' '*18, 'GÉNERO', ' '*8, 'AÑO', ' '*5, 'ISBN', ' '*8, 'ADQUIRIDO   ')
+            for i in datos:
+              if filtro_genero == datos[i][2]:
+                print(f'{datos[i][0]:35} {datos[i][1]:25} {datos[i][2]:15} {datos[i][3]:8} {datos[i][4]:15} {datos[i][5]:12}')
+                print('\n')
           elif op_reporte == 3:
             filtro_año = input("Dame el año de publicacion: \n").upper()
-
+            print('TITULO', ' '*29, 'AUTOR', ' '*18, 'GÉNERO', ' '*8, 'AÑO', ' '*5, 'ISBN', ' '*8, 'ADQUIRIDO   ')
+            for i in datos:
+              if filtro_año == datos[i][3]:
+                print(f'{datos[i][0]:35} {datos[i][1]:25} {datos[i][2]:15} {datos[i][3]:8} {datos[i][4]:15} {datos[i][5]:12}')
+                print('\n')
           elif op_reporte == 4:
             # Catálogo completo
             for i in datos:
