@@ -76,11 +76,6 @@ while True:
       elif op_consulta == 2:
         # Reportes tabulados
         while True:
-          print("DATOS GUARDADOS:")
-          print("*"*50)
-          for identificadores in datos:
-            print(datos[identificadores])
-          print("*"*50)
           print("Escoge una forma de filtrar los datos:")
           print("[1]- Por autor")
           print("[2]- Por genero")
@@ -89,7 +84,7 @@ while True:
           print("[5]- Regresar al menu anterior")
           op_reporte = int(input())
           if op_reporte == 1:
-            # AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+            # Filtrado por autor
             filtro_autor = input("Dame el autor: \n").upper()
             print('TITULO', ' '*29, 'AUTOR', ' '*18, 'GÉNERO', ' '*8, 'AÑO', ' '*5, 'ISBN', ' '*8, 'ADQUIRIDO   ')
             for i in datos:
@@ -97,6 +92,7 @@ while True:
                 print(f'{datos[i][0]:35} {datos[i][1]:25} {datos[i][2]:15} {datos[i][3]:8} {datos[i][4]:15} {datos[i][5]:12}')
                 print('\n')
           elif op_reporte == 2:
+            # Filtrado por género
             filtro_genero = input("Dame el genero: \n").upper()
             print('TITULO', ' '*29, 'AUTOR', ' '*18, 'GÉNERO', ' '*8, 'AÑO', ' '*5, 'ISBN', ' '*8, 'ADQUIRIDO   ')
             for i in datos:
@@ -104,6 +100,7 @@ while True:
                 print(f'{datos[i][0]:35} {datos[i][1]:25} {datos[i][2]:15} {datos[i][3]:8} {datos[i][4]:15} {datos[i][5]:12}')
                 print('\n')
           elif op_reporte == 3:
+            # Filtrado por año
             filtro_año = input("Dame el año de publicacion: \n").upper()
             print('TITULO', ' '*29, 'AUTOR', ' '*18, 'GÉNERO', ' '*8, 'AÑO', ' '*5, 'ISBN', ' '*8, 'ADQUIRIDO   ')
             for i in datos:
@@ -116,8 +113,10 @@ while True:
               print('TITULO', ' '*29, 'AUTOR', ' '*18, 'GÉNERO', ' '*8, 'AÑO', ' '*5, 'ISBN', ' '*8, 'ADQUIRIDO   ')}
 
           elif op_reporte == 5:
+            # Regresa al menú anterior
             break
       elif op_consulta == 3:
+        # Regresa al menú anterior
         print('Volviendo al menú principal . . .')
         break
 
