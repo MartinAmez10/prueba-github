@@ -89,12 +89,13 @@ while True:
           print("[5]- Regresar al menu anterior")
           op_reporte = int(input())
           if op_reporte == 1:
-            # AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+            # Filtro de datos
             filtro_autor = input("Dame el autor: \n").upper()
             print('TITULO', ' '*29, 'AUTOR', ' '*18, 'GÉNERO', ' '*8, 'AÑO', ' '*5, 'ISBN', ' '*8, 'ADQUIRIDO   ')
             for i in datos:
               if filtro_autor == datos[i][1]:
-                print(f'{datos[i][0]:35} {datos[i][1]:25} {datos[i][2]:15} {datos[i][3]:8} {datos[i][4]:15} {datos[i][5]:12}')
+                print(f'{datos[i][0]} {datos[i][1]} {datos[i][2]} {datos[i][3]} {datos[i][4]} {datos[i][5]}'.format(titulo,autor,genero,
+                año_publicacion,ISBN,fecha_adquisicion))
                 print('\n')
           elif op_reporte == 2:
             filtro_genero = input("Dame el genero: \n").upper()
