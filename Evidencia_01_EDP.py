@@ -90,17 +90,19 @@ while True:
           op_reporte = int(input())
           if op_reporte == 1:
             # AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-            filtro_autor = input("Dame el autor: \n").upper
-            if filtro_autor == identificador:
-              for filtro_autor in datos:
-                print(datos[identificadores][titulo, autor, genero, año_publicacion, ISBN, fecha_adquisicion])
+            filtro_autor = input("Dame el autor: \n").upper()
+            for i in datos:
+              if filtro_autor == datos[i][1]:
+                print(datos[i])
+                print('\n')
           elif op_reporte == 2:
-            filtro_genero = input("Dame el genero: \n").upper
+            filtro_genero = input("Dame el genero: \n").upper()
 
           elif op_reporte == 3:
-            filtro_año = input("Dame el año de publicacion: \n").upper
+            filtro_año = input("Dame el año de publicacion: \n").upper()
 
           elif op_reporte == 4:
+            # Catálogo completo
             for i in datos:
               print('*')
               print('\tID')
