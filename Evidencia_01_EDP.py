@@ -88,7 +88,7 @@ while True:
             filtro_autor = input("Dame el autor: \n").upper()
             for i in datos:
               if filtro_autor == datos[i][1]:
-                print(datos[i])
+                print(f'{datos[i][0]:35} {datos[i][1]:25} {datos[i][2]:15} {datos[i][3]:8} {datos[i][4]:15} {datos[i][5]:12}')
                 print('\n')
           elif op_reporte == 2:
             filtro_genero = input("Dame el genero: \n").upper()
