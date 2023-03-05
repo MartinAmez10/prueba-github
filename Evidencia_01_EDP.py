@@ -85,7 +85,8 @@ while True:
           print("[1]- Por autor")
           print("[2]- Por genero")
           print("[3]- Por año de publicacion")
-          print("[4]- Regresar al menu anterior")
+          print("[4]- Catálogo completo")
+          print("[5]- Regresar al menu anterior")
           op_reporte = int(input())
           if op_reporte == 1:
             # AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -98,8 +99,13 @@ while True:
 
           elif op_reporte == 3:
             filtro_año = input("Dame el año de publicacion: \n").upper
-            
+
           elif op_reporte == 4:
+            for i in datos:
+              print('*')
+              print('\tID')
+
+          elif op_reporte == 5:
             break
       elif op_consulta == 3:
         print('Volviendo al menú principal . . .')
