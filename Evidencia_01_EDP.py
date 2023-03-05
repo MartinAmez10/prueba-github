@@ -33,6 +33,7 @@ while True:
       # Separamos por la opción seleccionada
       if op_consulta == 1:
         # Consulta de título o ISBN
+        ## MOSTRAR DATOS
         while True:
           print("De que forma deseas buscar el libro?(escribe el numero):")
           print("[1]- Por titulo")
