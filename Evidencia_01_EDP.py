@@ -113,9 +113,11 @@ while True:
                 print('\n')
           elif op_reporte == 4:
             # Catálogo completo
-            for i in datos:
-              print('*')
-              print('\tID')
+            print("DATOS GUARDADOS:")
+            print("*"*50)
+            for identificadores in datos:
+              print(datos[identificadores])
+            print("*"*50)
 
           elif op_reporte == 5:
             break
