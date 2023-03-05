@@ -44,7 +44,7 @@ while True:
             for i in datos:
               print(datos[i][0])
             # Añadí esto para filtrar por título y mostrar información (Maybe lo módifico)
-            titulo_buscar = input('Seleccione el título a mostrar: ')
+            titulo_buscar = input('Seleccione el título a mostrar: ').upper()
             for i in datos:
               if titulo_buscar == datos[i][0]:
                 print('*'*5, ' Datos del libro ', '*'*5)
@@ -84,7 +84,7 @@ while True:
           print("[5]- Regresar al menu anterior")
           op_reporte = int(input())
           if op_reporte == 1:
-            # Filtrado por autor
+            # Filtro por autor
             filtro_autor = input("Dame el autor: \n").upper()
             print('TITULO', ' '*29, 'AUTOR', ' '*18, 'GÉNERO', ' '*8, 'AÑO', ' '*5, 'ISBN', ' '*8, 'ADQUIRIDO   ')
             for i in datos:
@@ -109,8 +109,12 @@ while True:
                 print('\n')
           elif op_reporte == 4:
             # Catálogo completo
-            for i in datos:
-              print('TITULO', ' '*29, 'AUTOR', ' '*18, 'GÉNERO', ' '*8, 'AÑO', ' '*5, 'ISBN', ' '*8, 'ADQUIRIDO   ')}
+            print("DATOS GUARDADOS:")
+            print('TITULO', ' '*29, 'AUTOR', ' '*18, 'GÉNERO', ' '*8, 'AÑO', ' '*5, 'ISBN', ' '*8, 'ADQUIRIDO   ')
+            print("*"*113)
+            for i in datos: 
+              print(f'{datos[i][0]:35} {datos[i][1]:25} {datos[i][2]:15} {datos[i][3]:8} {datos[i][4]:15} {datos[i][5]:12}')
+            print("*"*113)
 
           elif op_reporte == 5:
             # Regresa al menú anterior
