@@ -108,10 +108,10 @@ while True:
           elif op_reporte == 4:
             # Catálogo completo
             print("DATOS GUARDADOS:")
-            print("*"*50)
+            print("*"*100)
             for identificadores in datos:
               print(datos[identificadores])
-            print("*"*50)
+            print("*"*100)
 
           elif op_reporte == 5:
             break
