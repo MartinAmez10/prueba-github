@@ -76,11 +76,6 @@ while True:
       elif op_consulta == 2:
         # Reportes tabulados
         while True:
-          print("DATOS GUARDADOS:")
-          print("*"*50)
-          for identificadores in datos:
-            print(datos[identificadores])
-          print("*"*50)
           print("Escoge una forma de filtrar los datos:")
           print("[1]- Por autor")
           print("[2]- Por genero")
