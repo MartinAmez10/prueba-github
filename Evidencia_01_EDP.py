@@ -44,7 +44,7 @@ while True:
             for i in datos:
               print(datos[i][0])
             # Añadí esto para filtrar por título y mostrar información (Maybe lo módifico)
-            titulo_buscar = input('Seleccione el título a mostrar: ')
+            titulo_buscar = input('Seleccione el título a mostrar: ').upper()
             for i in datos:
               if titulo_buscar == datos[i][0]:
                 print('*'*5, ' Datos del libro ', '*'*5)
