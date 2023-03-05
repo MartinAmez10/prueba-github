@@ -79,22 +79,24 @@ while True:
           print("DATOS GUARDADOS:")
           print("*"*50)
           for identificadores in datos:
-            print(datos)
+            print(datos[identificadores])
           print("*"*50)
           print("Escoge una forma de filtrar los datos:")
           print("[1]- Por autor")
           print("[2]- Por genero")
           print("[3]- Por año de publicacion")
           print("[4]- Regresar al menu anterior")
-          op_reporte = input()
+          op_reporte = int(input())
           if op_reporte == 1:
-            op_filtro = input("Dame el autor: \n")
-
+            filtro_autor = input("Dame el autor: \n").upper
+            if filtro_autor == identificador:
+              for filtro_autor in datos:
+                print(datos[identificadores][titulo, autor, genero, año_publicacion, ISBN, fecha_adquisicion])
           elif op_reporte == 2:
-            op_filtro = input("Dame el genero: \n")
+            filtro_genero = input("Dame el genero: \n").upper
 
           elif op_reporte == 3:
-            op_filtro = input("Dame el año de publicacion: \n")
+            filtro_año = input("Dame el año de publicacion: \n").upper
             
           elif op_reporte == 4:
             break
